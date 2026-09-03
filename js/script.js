@@ -83,6 +83,27 @@ document.addEventListener('DOMContentLoaded', () => {
     revealEls.forEach(el => revealObserver.observe(el));
   }
 
+  // Carrossel da galeria (setas + esconder seta no início/fim)
+  document.querySelectorAll('.gallery-wrap').forEach(wrap => {
+    const strip = wrap.querySelector('.gallery-strip');
+    const prevBtn = wrap.querySelector('.gallery-prev');
+    const nextBtn = wrap.querySelector('.gallery-next');
+    if (!strip) return;
+
+    const scrollStep = () => (strip.querySelector('img')?.offsetWidth || 300) + 16;
+    prevBtn?.addEventListener('click', () => strip.scrollBy({ left: -scrollStep(), behavior: 'smooth' }));
+    nextBtn?.addEventListener('click', () => strip.scrollBy({ left: scrollStep(), behavior: 'smooth' }));
+
+    const updateNavState = () => {
+      const max = strip.scrollWidth - strip.clientWidth;
+      prevBtn?.classList.toggle('is-hidden', strip.scrollLeft <= 4);
+      nextBtn?.classList.toggle('is-hidden', strip.scrollLeft >= max - 4);
+    };
+    strip.addEventListener('scroll', updateNavState, { passive: true });
+    window.addEventListener('resize', updateNavState);
+    updateNavState();
+  });
+
   // Lightbox das fotos (galeria + cards)
   const lightbox = document.querySelector('.lightbox');
   const lightboxImg = lightbox?.querySelector('img');
