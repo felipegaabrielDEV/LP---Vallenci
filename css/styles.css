@@ -371,7 +371,12 @@ h1, h2, h3{
   margin-bottom: 20px;
 }
 .possibilidade-text p{ color: var(--texto-suave); margin-bottom: 20px; font-size: 17px; }
-.possibilidade-text .btn{ margin-top: 8px; }
+.possibilidade-text .btn{
+  display: block;
+  width: fit-content;
+  margin: 20px 0 0;
+  text-align: left;
+}
 .pull-quote{
   font-family: var(--font-display);
   font-style: italic;
