@@ -698,7 +698,7 @@ h1, h2, h3{
     border-top: 1px solid rgba(246,244,238,0.12);
   }
 }
-.footer-link{
+.footer-grid a.footer-link{
   display: flex;
   align-items: center;
   gap: 10px;
