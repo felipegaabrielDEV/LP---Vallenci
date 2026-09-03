@@ -710,9 +710,8 @@ h1, h2, h3{
   height: 17px;
   flex-shrink: 0;
   opacity: 0.8;
-  margin-top: 1px;
+  display: block;
 }
-.icon-whatsapp{ margin-top: 2px; }
 .footer-link:hover{ opacity: 0.8; }
 .footer-link:hover .footer-icon{ opacity: 1; }
 .footer-logo{
