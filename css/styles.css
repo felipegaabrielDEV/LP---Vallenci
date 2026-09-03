@@ -499,6 +499,16 @@ h1, h2, h3{
 @media (max-width: 800px){
   .local-grid{ grid-template-columns: 1fr; }
 }
+.map-embed{
+  margin-top: 44px;
+  border: 1px solid rgba(77,81,67,0.15);
+  aspect-ratio: 16 / 6;
+}
+.map-embed iframe{ width: 100%; height: 100%; border: 0; display: block; }
+.section-dark .map-embed{ border-color: rgba(246,244,238,0.25); }
+@media (max-width: 700px){
+  .map-embed{ aspect-ratio: 4 / 5; }
+}
 
 /* ===== ECOSSISTEMA (07) ===== */
 .ecossistema-tags{
