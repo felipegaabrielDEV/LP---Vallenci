@@ -712,7 +712,7 @@ h1, h2, h3{
   opacity: 0.8;
   margin-top: 1px;
 }
-.icon-whatsapp{ opacity: 1; margin-top: 2px; }
+.icon-whatsapp{ margin-top: 2px; }
 .footer-link:hover{ opacity: 0.8; }
 .footer-link:hover .footer-icon{ opacity: 1; }
 .footer-logo{
