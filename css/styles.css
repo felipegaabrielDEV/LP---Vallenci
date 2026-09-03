@@ -379,6 +379,7 @@ h1, h2, h3{
   gap: 10px;
   width: fit-content;
   margin: 20px auto 0;
+  overflow: hidden;
 }
 .possibilidade-text .btn-arrow{
   width: 16px;
@@ -392,20 +393,18 @@ h1, h2, h3{
 .possibilidade-text .btn::after{
   content: "";
   position: absolute;
-  inset: 0;
-  border-radius: 2px;
-  border: 2px solid var(--verde-escuro);
-  opacity: 0.6;
-  animation: btn-ping 2.6s ease-out infinite;
+  top: 0;
+  left: -30%;
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(115deg, transparent, rgba(246,244,238,0.55), transparent);
+  transform: skewX(-18deg);
+  animation: btn-shine 2.2s ease-in-out infinite;
   pointer-events: none;
 }
-.possibilidade-text .btn:hover::after{
-  animation-play-state: paused;
-  opacity: 0;
-}
-@keyframes btn-ping{
-  0%{ transform: scale(1); opacity: 0.55; }
-  75%, 100%{ transform: scale(1.16); opacity: 0; }
+@keyframes btn-shine{
+  0%{ left: -30%; }
+  55%, 100%{ left: 130%; }
 }
 .pull-quote{
   font-family: var(--font-display);
