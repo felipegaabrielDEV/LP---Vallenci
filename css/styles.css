@@ -302,9 +302,12 @@ h1, h2, h3{
   font-style: italic;
   font-size: 20px;
   color: var(--texto-suave);
-  max-width: 580px;
+  max-width: 820px;
   margin-left: auto;
   margin-right: auto;
+}
+@media (min-width: 1024px){
+  .identificacao-closing{ white-space: nowrap; }
 }
 
 /* ===== PROBLEMA / POSSIBILIDADE (03, 04) ===== */
