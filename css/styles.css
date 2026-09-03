@@ -655,25 +655,49 @@ h1, h2, h3{
 .site-footer{
   background: var(--verde-escuro);
   color: rgba(246,244,238,0.85);
-  padding: 60px 24px 26px;
+  padding: 84px 24px 30px;
   font-size: 14.5px;
+  border-top: 1px solid rgba(246,244,238,0.1);
 }
 .footer-grid{
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr;
   gap: 32px;
-  margin-bottom: 34px;
+  margin-bottom: 40px;
+}
+.footer-grid > div:not(.footer-brand){
+  padding-left: 32px;
+  border-left: 1px solid rgba(246,244,238,0.12);
 }
 .footer-grid h4{
   font-family: var(--font-body);
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  color: rgba(246,244,238,0.55);
-  margin-bottom: 14px;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: rgba(246,244,238,0.7);
+  margin-bottom: 18px;
+  padding-bottom: 12px;
   text-transform: uppercase;
+  position: relative;
 }
-.footer-grid a{ color: var(--creme); text-decoration: none; display: block; margin-bottom: 8px; }
+.footer-grid h4::after{
+  content: "";
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 26px;
+  height: 2px;
+  background: var(--verde-medio);
+}
+.footer-grid a{ color: var(--creme); text-decoration: none; display: block; margin-bottom: 11px; font-size: 14.5px; }
+@media (max-width: 700px){
+  .footer-grid > div:not(.footer-brand){
+    padding-left: 0;
+    padding-top: 22px;
+    margin-top: 6px;
+    border-left: none;
+    border-top: 1px solid rgba(246,244,238,0.12);
+  }
+}
 .footer-link{
   display: flex;
   align-items: center;
@@ -682,32 +706,33 @@ h1, h2, h3{
 }
 .footer-link-address{ align-items: flex-start; }
 .footer-icon{
-  width: 16px;
-  height: 16px;
+  width: 17px;
+  height: 17px;
   flex-shrink: 0;
-  opacity: 0.65;
+  opacity: 0.8;
   margin-top: 1px;
 }
 .footer-link:hover{ opacity: 0.8; }
-.footer-link:hover .footer-icon{ opacity: 0.9; }
+.footer-link:hover .footer-icon{ opacity: 1; }
 .footer-logo{
   display: flex;
   align-items: center;
   gap: 10px;
   color: rgba(246,244,238,0.85);
 }
-.footer-logo svg{ height: 28px; width: 28px; opacity: 0.8; }
+.footer-logo svg{ height: 32px; width: 32px; opacity: 0.9; }
 .footer-logo span{
   font-family: var(--font-display);
-  font-weight: 500;
-  font-size: 19px;
+  font-weight: 600;
+  font-size: 22px;
   letter-spacing: 0.02em;
+  color: var(--creme);
 }
-.footer-brand p{ color: rgba(246,244,238,0.75); max-width: 320px; margin-top: 12px; }
+.footer-brand p{ color: rgba(246,244,238,0.8); max-width: 320px; margin-top: 14px; line-height: 1.65; }
 .footer-legal{
   border-top: 1px solid rgba(246,244,238,0.18);
-  padding-top: 22px;
-  color: rgba(246,244,238,0.6);
+  padding-top: 24px;
+  color: rgba(246,244,238,0.65);
   font-size: 12.5px;
 }
 @media (max-width: 700px){
