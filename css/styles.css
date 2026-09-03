@@ -6,12 +6,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap');
 
 :root{
-  --bege: #E7DECF;
-  --bege-claro: #F1ECE2;
+  /* paleta oficial (Pantone aprovado pelo cliente) */
+  --oil-green: #83836C;    /* Pantone 17-0115 TCX — Oil Green */
+  --snow-white: #F2F0EA;   /* Pantone 11-0602 TCX — Snow White */
+  --arctic-wolf: #E7DED0;  /* Pantone 12-0602 TCX — Arctic Wolf */
+
+  --bege: var(--arctic-wolf);
+  --bege-claro: var(--snow-white);
   --verde-escuro: #43473A;
   --verde-escuro-2: #383C30;
-  --verde-medio: #83836B;
-  --creme: #F6F4EE;
+  --verde-medio: var(--oil-green);
+  --creme: var(--snow-white);
   --texto-suave: #4A4E3F;
   --pendente-bg: #f3e6cc;
   --pendente-texto: #8a6a2f;
@@ -36,6 +41,8 @@ body{
 }
 
 img{ max-width: 100%; display: block; }
+
+strong{ font-weight: 600; }
 
 .container{
   max-width: var(--max-width);
@@ -196,6 +203,10 @@ h1, h2, h3{
 
 /* ===== SEÇÃO GENÉRICA ===== */
 .section{ padding: 92px 0; background: var(--bege-claro); }
+
+/* variante bege (Arctic Wolf) — quebra a alternância binária claro/escuro,
+   intercalando um tom intermediário entre as seções claras e escuras */
+.section-alt{ background: var(--bege); }
 .section-eyebrow{
   text-align: center;
   font-size: 13.5px;
