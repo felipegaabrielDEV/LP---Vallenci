@@ -556,9 +556,10 @@ h1, h2, h3{
 /* — galeria de fotos — */
 .local-gallery{
   display: grid;
-  grid-template-columns: 1fr 150px;
-  gap: 12px;
+  grid-template-columns: 1fr 130px;
+  gap: 10px;
   margin-bottom: 52px;
+  height: 420px;
 }
 .local-gallery-main{
   position: relative;
@@ -568,16 +569,15 @@ h1, h2, h3{
 }
 .local-gallery-main img{
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
   transition: opacity 0.35s ease;
-  border-radius: 14px;
 }
 .local-gallery-thumbs{
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  overflow: hidden;
+  gap: 8px;
 }
 .local-thumb{
   flex: 1 1 0;
@@ -658,9 +658,10 @@ h1, h2, h3{
   color: var(--creme);
 }
 @media (max-width: 860px){
-  .local-gallery{ grid-template-columns: 1fr; }
-  .local-gallery-thumbs{ flex-direction: row; overflow-x: auto; gap: 8px; }
-  .local-thumb{ flex: 0 0 90px; }
+  .local-gallery{ grid-template-columns: 1fr; height: auto; }
+  .local-gallery-main{ aspect-ratio: 4 / 3; }
+  .local-gallery-thumbs{ flex-direction: row; overflow-x: auto; gap: 6px; }
+  .local-thumb{ flex: 0 0 72px; height: 56px; }
   .local-info{ grid-template-columns: 1fr; }
   .local-info-map{ min-height: 300px; }
   .map-open{ font-size: 12.5px; padding: 8px 13px; }
