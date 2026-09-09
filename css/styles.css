@@ -553,56 +553,17 @@ h1, h2, h3{
   0%, 100%{ transform: scale(1); }
   50%{ transform: scale(1.1); }
 }
-/* — galeria de fotos — */
-.local-gallery{
-  display: grid;
-  grid-template-columns: 1fr 130px;
-  gap: 10px;
+/* — foto da fachada — */
+.local-photo{
   margin-bottom: 52px;
-  height: 420px;
-}
-.local-gallery-main{
-  position: relative;
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 24px 60px rgba(0,0,0,0.35);
 }
-.local-gallery-main img{
+.local-photo img{
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   display: block;
-  transition: opacity 0.35s ease;
-}
-.local-gallery-thumbs{
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.local-thumb{
-  flex: 1 1 0;
-  min-height: 0;
-  border: 3px solid transparent;
-  border-radius: 10px;
-  overflow: hidden;
-  cursor: pointer;
-  background: none;
-  padding: 0;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
-}
-.local-thumb img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.local-thumb.active{
-  border-color: rgba(246,244,238,0.7);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-}
-.local-thumb:not(.active):hover{
-  border-color: rgba(246,244,238,0.35);
-  transform: translateY(-2px);
 }
 
 /* — info + mapa — */
@@ -658,10 +619,7 @@ h1, h2, h3{
   color: var(--creme);
 }
 @media (max-width: 860px){
-  .local-gallery{ grid-template-columns: 1fr; height: auto; }
-  .local-gallery-main{ aspect-ratio: 4 / 3; }
-  .local-gallery-thumbs{ flex-direction: row; overflow-x: auto; gap: 6px; }
-  .local-thumb{ flex: 0 0 72px; height: 56px; }
+  .local-photo{ border-radius: 10px; }
   .local-info{ grid-template-columns: 1fr; }
   .local-info-map{ min-height: 300px; }
   .map-open{ font-size: 12.5px; padding: 8px 13px; }

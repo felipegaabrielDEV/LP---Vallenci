@@ -104,23 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
     updateNavState();
   });
 
-  // Galeria de localização (troca imagem principal ao clicar miniatura)
-  const localMainImg = document.getElementById('local-main-img');
-  const localThumbs = document.querySelectorAll('.local-thumb');
-  if (localMainImg && localThumbs.length) {
-    localThumbs.forEach(thumb => {
-      thumb.addEventListener('click', () => {
-        localThumbs.forEach(t => t.classList.remove('active'));
-        thumb.classList.add('active');
-        localMainImg.style.opacity = '0';
-        setTimeout(() => {
-          localMainImg.src = thumb.dataset.src;
-          localMainImg.alt = thumb.dataset.alt;
-          localMainImg.style.opacity = '1';
-        }, 200);
-      });
-    });
-  }
 
   // Lightbox das fotos (galeria + cards)
   const lightbox = document.querySelector('.lightbox');
